@@ -1,0 +1,50 @@
+
+<ion-content padding>
+  <ion-list>
+    
+    <ion-item>
+      <ion-label>On/Off</ion-label>
+      <ion-toggle [(ngModel)]="state" (ionBlur)="update()"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Light Sensor</ion-label>
+      <ion-toggle [(ngModel)]="lightSensor" (ionBlur)="update()"></ion-toggle>
+   </ion-item>    
+  </ion-list>
+
+  <ion-list>
+    <h5>Brightness</h5>  
+    <ion-item>
+      <ion-range min="0" max="255" [(ngModel)]="brightness" class="brightness" 
+          [disabled]="brightnessDisabled" [ngClass]="{'disabled' : lightSensor}" (ionBlur)="update()">
+        <ion-icon small range-left name="sunny"></ion-icon>
+        <ion-icon range-right name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+    <h5>Red</h5>
+    <ion-item>
+        <ion-range min="1" max="255"[(ngModel)]="rgb[0]" class="red" (ionBlur)="update()">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>255</ion-label>
+        </ion-range>
+    </ion-item>
+    <h5>Green</h5>
+    <ion-item>
+        <ion-range min="1" max="255"[(ngModel)]="rgb[1]" class="green" (ionBlur)="update()">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>255</ion-label>
+        </ion-range>
+    </ion-item>
+    <h5>Blue</h5>
+    <ion-item>
+        <ion-range min="1" max="255"[(ngModel)]="rgb[2]" class="blue" (ionBlur)="update()">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>255</ion-label>
+        </ion-range>    
+    </ion-item>
+  
+
+  </ion-list> 
+</ion-content>
+
+

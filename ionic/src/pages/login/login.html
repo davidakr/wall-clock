@@ -1,0 +1,21 @@
+<ion-content padding>
+<h1>Clock Login</h1>
+
+<div class="content"> 
+  <ion-list>    
+    <ion-item>
+      <ion-input [(ngModel)]="ipAdress" placeholder="IP Adress" type="text" value="" name="ipAdress"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Remember Login</ion-label>
+      <ion-checkbox [(ngModel)]="rememberMe" color="dark" checked="true"></ion-checkbox>
+    </ion-item>    
+  </ion-list>
+
+  <form (ngSubmit)="login()">
+      <button ion-button full>Check</button>
+  </form>
+</div>
+
+</ion-content>

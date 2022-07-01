@@ -1,0 +1,34 @@
+page-home { 
+      
+}
+
+.red.range-md .range-knob,
+.red.range-md .range-bar-active {
+    background: rgb(255, 0, 0);
+}
+
+.green.range-md .range-knob,
+.green.range-md .range-bar-active {
+    background: rgb(0, 255, 0);
+}
+.blue.range-md .range-knob,
+.blue.range-md .range-bar-active {
+    background: rgb(0, 0, 255);
+}
+.brightness.range-md .range-knob,
+.brightness.range-md .range-bar-active {
+    background: rgb(51, 51, 51);
+}
+
+
+.disabled.range-md .range-knob,
+.disabled.range-md .range-bar-active,
+.disabled.range-md .range-bar {
+    background: rgb(212, 212, 212);
+}
+.disabled {
+    color: rgb(212, 212, 212);
+}
+
+
+
